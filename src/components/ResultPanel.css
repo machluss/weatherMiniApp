@@ -1,0 +1,57 @@
+.result {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    flex-basis: 50px;
+    line-height: 50px;
+
+    font-size: 16px;
+}
+
+.title>strong {
+    font-size: 24px;
+    vertical-align: -2px;
+}
+
+.resultItem {
+    height: 60px;
+
+    display: flex;
+}
+
+.resultItem>p {
+    width: 50%;
+    line-height: 60px;
+    padding-left: 10px;
+
+    transform: translateX(100%);
+    transition: .2s;
+
+    font-size: 20px;
+    text-align: left;
+}
+
+.resultItem:first-of-type>p {
+    width: 70%;
+}
+
+.resultItem>.imgWrap {
+    padding-right: 10px;
+
+    transform: translateX(-100%);
+    transition: .2s;
+
+    flex-grow: 1;
+
+    text-align: right;
+}
+
+.imgWrap>img {
+    height: 100%;
+}
+
+.result.active .imgWrap, .result.active p {
+    transform: translateX(0);
+}

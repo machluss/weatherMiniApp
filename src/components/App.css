@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrap {
+  min-height: 100vh;
+
+  background-image: linear-gradient(rgb(176, 216, 248), rgb(77, 96, 133));
+}
+
+.App {
+  width: 450px;
+  overflow: hidden;
+
+  margin: 0 auto;
+  padding: 5px;
+  /* border: 1px solid #000; */
+  
+  text-align: center;
+}
+
+.sunImg {
+  width: 200px;
+  margin: 20px auto;
+
+  animation: sun 10s linear infinite;
+}
+
+.sunImg>img {
+  width: 100%;
+}
+
+@keyframes sun{
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
